@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+:root {
+  font-family: 'Merriweather', Georgia, serif;
+}
+
+body {
+  font-family: 'Merriweather', Georgia, serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+}

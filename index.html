@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function() {
+        try {
+          var _origFetch = window.fetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return _origFetch;
+            },
+            set: function(val) {
+              _origFetch = val;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {}
+
+        try {
+          if (typeof globalThis !== 'undefined' && globalThis !== window) {
+            var _origGlobalFetch = globalThis.fetch;
+            Object.defineProperty(globalThis, 'fetch', {
+              get: function() {
+                return _origGlobalFetch;
+              },
+              set: function(val) {
+                _origGlobalFetch = val;
+              },
+              configurable: true,
+              enumerable: true
+            });
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <title>EquiSplit - Smart Bill Splitter & Receipt Scanner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <meta name="description" content="AI-powered restaurant bill & group expense splitter with camera receipt OCR, uneven splits, tip & tax calculator, UPI/Venmo/PayPal settlement, and multi-currency forex." />
+    <meta property="og:title" content="EquiSplit - Smart Bill Splitter & Receipt Scanner" />
+    <meta property="og:description" content="AI-powered restaurant bill & group expense splitter with camera receipt OCR, uneven splits, tip & tax calculator, UPI/Venmo/PayPal settlement, and multi-currency forex." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

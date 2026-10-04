@@ -1,0 +1,10 @@
+{
+  "name": "EquiSplit - Smart Bill Splitter & Receipt Scanner",
+  "description": "AI-powered restaurant bill & group expense splitter with camera receipt OCR, uneven splits, tip & tax calculator, UPI/Venmo/PayPal settlement, and multi-currency forex.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
